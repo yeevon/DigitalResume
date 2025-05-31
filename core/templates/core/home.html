@@ -1,0 +1,28 @@
+{%extends "base.html"%}
+
+{% block title %}
+  <title>HTMX + Alpine</title>
+{% endblock %}
+
+{% block content %}
+<div x-data="{ count: 0 }">
+
+  <h1>HTMX + Alpine</h1>
+
+  <!-- Alpine-controlled counter -->
+  <div>
+    <p>Count: <span x-text="count"></span></p>
+    <button @click="count++">Increase (Alpine)</button>
+  </div>
+
+  <hr>
+
+  <!-- HTMX example (loads content from /hello when clicked) -->
+  <div id="htmx-target">
+    <button hx-get="/fun" hx-target="#htmx-target" hx-swap="outerHTML">
+      Load Fun (HTMX)
+    </button>
+  </div>
+
+</div>
+{% endblock %}
