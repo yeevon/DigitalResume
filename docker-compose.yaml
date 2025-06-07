@@ -1,9 +1,26 @@
-services:
+ services:
   web:
-    build: .
-    ports:
-      - "8000:8000"
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+    container_name: django_web
     volumes:
       - .:/app
+    ports:
+      - "8000:8000"
     environment:
       - DEBUG=1
+    depends_on:
+      - tailwind
+
+
+  tailwind:
+    build:
+      context: .
+      dockerfile: Dockerfile.tailwind
+    container_name: tailwind_css
+    volumes:
+      - .:/app
+    working_dir: /app
+    tty: true
+    stdin_open: true
