@@ -20,7 +20,7 @@ RUN curl -fsSL https://deb.nodesource.com/setup_20.x |bash - && \
     apt-get install -y nodejs
 
 # Install Tailwind CLI and npm packages
-COPY package.json package-lock..json* ./
+COPY package.json package-lock.json* ./
 RUN npm install
 
 # Install Python dependencies

@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-o2poa$&g0qp$#03xlg#8vkcm)7inp_z0+u(_xb934yqtw#64r!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['10.0.0.166', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -125,3 +125,5 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = 'core.User'

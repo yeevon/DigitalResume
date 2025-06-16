@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   {% load static %}
   {% block title %}{% endblock %}
 
-  <!-- HTMX -->
+  <title>My Resume</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <script src="https://unpkg.com/htmx.org@1.9.2"></script>
-
-  <!-- Alpine.js -->
-  <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-
-  <!-- Tailwind CSS-->
-   <link href="{% static 'output.css' %}" rel="stylesheet">
-
-  <style>
-    body { font-family: sans-serif; padding: 2rem; }
-    button { margin-top: 1rem; }
-  </style>
 </head>
-<body>
-
+<body class="bg-gray-100 text-gray-800 font-sans">
+  <div class="max-w-4xl mx-auto p-6">
+    <header class="text-center mb-8">
+      <h1 class="text-4xl font-bold">Jose Miguel de Lima</h1>
+      <p class="text-lg text-gray-600">QA Lead & Full Stack Developer</p>
+      <p class="text-sm text-gray-500">delimajm@gmail.com | 
+        <a class="text-blue-600 text-semibold hover:underline" href="https://www.linkedin.com/in/jose-de-lima-aa8a5a23/">LinkedIn</a> | 
+        <a class="text-blue-600 hover:underline" href="https://github.com/yeevon">Github</a>
+      </p>
+    </header>
+    
     {% block content %}{% endblock %}
+
+    <footer class="text-center text-xs text-gray-400 mt-10">
+      <p>&copy; 2025 Jose Miguel de Lima. All rights reserved.</p>
+    </footer>
+  </div>
 </body>
 
 </html>
