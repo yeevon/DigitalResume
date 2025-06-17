@@ -3,6 +3,8 @@
     build:
       context: .
       dockerfile: Dockerfile.web
+    env_file:
+      - .env
     container_name: django_web
     volumes:
       - .:/app
