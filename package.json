@@ -4,6 +4,6 @@
   },
   "scripts": {
     "tw:build": "tailwindcss -i ./core/static/input.css -o ./core/static/output.css --watch",
-    "tw:prod": "npx tailwindcss -i ./core/static/input.css -o ./core/static/output.css --minify"
+    "tw:build:prod": "npx tailwindcss -i ./core/static/input.css -o ./core/static/output.css --minify"
   }
 }
