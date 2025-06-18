@@ -1,14 +1,18 @@
+{% load static %}
 <div 
     x-data="{ open: false }"
     class="text-center"
 >
     <div 
         @click="open = true"
-        class="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl hover:scale-[1.05] transition duration-300 cursor-pointer"
+        class="relative bg-white justify-between text-center rounded-xl p-6 shadow-lg sm:hover:shadow-2xl sm:hover:scale-[1.05] transition duration-300 cursor-pointer"
     >
-        <h4 class="text-lg text-blue-600 font-semibold">{{ job.title }}</h4>
-        <h6 class="text-base text-black">{{ job.role }}</h6>
-        <p class="text-base text-black">{{ job.dates }}</p>
+        <img class="w-5 h-5 absolute top-2 right-2" src="{% static 'images/Information_icon.svg.png' %}" alt="Information icon">
+        <div>
+            <h4 class="text-lg text-blue-600 font-semibold">{{ job.title }}</h4>
+            <h6 class="text-base text-black">{{ job.role }}</h6>
+            <p class="text-base text-black">{{ job.dates }}</p>
+        </div>
     </div>
 
     <div 
