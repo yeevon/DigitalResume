@@ -90,29 +90,80 @@ def home(request):
     club_tiles = [
         {
             "title": "Coding United GitHub",
-            "description": "As president, I manage the org repo, plan weekly challenges, and mentor contributors.",
+            "description": "As president, I managed to revive the club and implement group projects, the org repo, plan weekly challenges, and mentor contributors.",
             "link": "https://github.com/codingUnited",
             "icon": "github",  # special rendering case
         },
         {
-            "title": "Lorem Ipseum ",
-            "description": "Dolor sit amet, consectetur adipiscing",
+            "icon": "📚",
+            "title": "Organized Book Club",
+            "description": "Led initiative to launch a developer book club",
+            "items": [
+                "Selected first title: Object-Oriented Thought Process (5th Ed)",
+                "Organized reading schedule and peer discussions",
+                "Promoted O’Reilly access via SNHU portal",
+            ],
+            "skills": "Community engagement, initiative ownership, team facilitation",
         },
         {
-            "title": "Lorem Ipsum",
-            "description": "Dolor sit amet, consectetur adipiscing",
+            "icon": "🐍",
+            "title": "Python Learning Cohort",
+            "description": "Created and manage an async Python study group",
+            "items": [
+                "Set up structure for biweekly check-ins",
+                "Curated beginner curriculum via O’Reilly",
+                "Encouraged code sharing and project collaboration",
+            ],
+            "skills": "Curriculum planning, peer mentorship, async collaboration",
         },
         {
-            "title": "Lorem Ipsum",
-            "description": "Dolor sit amet, consectetur adipiscing",
+            "icon": "🌐",
+            "title": "Club Website Project",
+            "description": "Architected and deployed full-stack club site",
+            "items": [
+                "Tech stack: Django • HTMX • Alpine.js • SQLite • Docker",
+                "Wrote tech stack onboarding docs for contributors",
+                "Created GitHub Projects board for task tracking",
+            ],
+            "skills": "Full-stack dev, Docker, API integration, documentation",
+            "link": "https://github.com/codingUnited/clubwebsite",
         },
         {
-            "title": "Lorem Ipsum",
-            "description": "Dolor sit amet, consectetur adipiscing",
+            "icon": "⚙️",
+            "title": "Coding Challenge Platform",
+            "description": "Launched challenge system to build hands-on Git skills",
+            "items": [
+                "Current: Build and publish a GitHub repo from scratch",
+                "Helps new members learn pull requests, branching, and README best practices",
+            ],
+            "skills": "Skills: GitHub workflows, technical writing, community enablement",
+            "link": "https://github.com/codingUnited/ClubCodeChallenges",
+        },
+        {
+            "icon": "🎮",
+            "title": "Game Server Project",
+            "description": "Prototyped containerized game server for community play",
+            "items": [
+                "Focus on CI/CD, Docker, and remote deployment",
+                "Peer-led planning and monitoring of infrastructure",
+                "DevOps, networking basics, container orchestration",
+            ],
+        },
+        {   
+            "icon": "🧭",
+            "title": "Subcommittee Leadership",
+            "description": "Created a leadership system with subcommittees for club roles",
+            "items": [
+                "Engineering, Outreach, Mentorship, and Events",
+                "Mentored leads, delegated responsibilities, and supported growth",
+            ],
+            "skills": "Leadership, delegation, agile team structure",
         },
     ]
 
-    skills = ['JavaScript', 'Python', 'Django', 'Docker']
+    skills = ['JavaScript', 'Python', 'Django', 'Docker', 'Java', 'C#', 'Selenium', 
+    'WDIO', 'HTML', 'Tailwindcss', 'Pandas', 'LaTeX', 'MATLAB', 'WDIO', 'Jest', 'JUnit', 
+    'Postman', 'Testim', 'FitNesse',]
     
     return render(request, "core/home.html", {
         "jobs": jobs, 
