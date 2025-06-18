@@ -86,7 +86,39 @@ def home(request):
             ]
         },
     ]
-    return render(request, "core/home.html", {"jobs": jobs})
+
+    club_tiles = [
+        {
+            "title": "Coding United GitHub",
+            "description": "As president, I manage the org repo, plan weekly challenges, and mentor contributors.",
+            "link": "https://github.com/codingUnited",
+            "icon": "github",  # special rendering case
+        },
+        {
+            "title": "Lorem Ipseum ",
+            "description": "Dolor sit amet, consectetur adipiscing",
+        },
+        {
+            "title": "Lorem Ipsum",
+            "description": "Dolor sit amet, consectetur adipiscing",
+        },
+        {
+            "title": "Lorem Ipsum",
+            "description": "Dolor sit amet, consectetur adipiscing",
+        },
+        {
+            "title": "Lorem Ipsum",
+            "description": "Dolor sit amet, consectetur adipiscing",
+        },
+    ]
+
+    skills = ['JavaScript', 'Python', 'Django', 'Docker']
+    
+    return render(request, "core/home.html", {
+        "jobs": jobs, 
+        'skills':skills,
+        'club_tiles':club_tiles,
+        })
 
 def fun(request):
     return render(request, "core/fun.html")
