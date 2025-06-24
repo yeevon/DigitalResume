@@ -1,4 +1,6 @@
+import requests
 from django.shortcuts import render
+from dateutil import parser
 
 # Create your views here.
 def home(request):
@@ -161,14 +163,37 @@ def home(request):
         },
     ]
 
+    url = 'https://api.github.com/users/yeevon/repos'
+    headers = {'Accept': 'application/vnd.github.v3+json'}
+    response = requests.get(url, headers=headers)
+
+    if response.status_code == 200:
+        data = response.json()
+        
+        for r in data:
+            if not r['fork'] and not r['archived']:
+                r['updated_dt'] = parser.parse(r['updated_at'])
+    
+    
+        repos = sorted(
+            [r for r in data if 'updated_dt' in r],
+            key=lambda x: x['updated_dt'],
+            reverse=True
+        )[:]
+
+   
+
+
+
     skills = ['JavaScript', 'Python', 'Django', 'Docker', 'Java', 'C#', 'Selenium', 
     'WDIO', 'HTML', 'Tailwindcss', 'Pandas', 'LaTeX', 'MATLAB', 'WDIO', 'Jest', 'JUnit', 
     'Postman', 'Testim', 'FitNesse',]
     
     return render(request, "core/home.html", {
         "jobs": jobs, 
-        'skills':skills,
-        'club_tiles':club_tiles,
+        "skills":skills,
+        "club_tiles":club_tiles,
+        "repos": repos,
         })
 
 def fun(request):
