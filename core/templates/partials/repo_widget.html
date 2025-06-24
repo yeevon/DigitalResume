@@ -1,0 +1,16 @@
+<div class="my-6">
+  <h2 class="text-2xl font-semibold mb-4">GitHub Projects</h2>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {% for repo in repos %}
+    <div class="border rounded-lg p-4 shadow bg-white">
+      <h3 class="text-lg font-bold mb-1">
+        <a href="{{ repo.html_url }}" target="_blank" class="text-blue-700 hover:underline">{{ repo.name }}</a>
+      </h3>
+      <p class="text-sm text-gray-600 mb-2">{{ repo.description|default:"No description provided." }}</p>
+      <p class="text-xs text-gray-500">★ {{ repo.stargazers_count }} | Updated: {{ repo.updated_dt|date:"Y-m-d" }}</p>
+    </div>
+    {% empty %}
+    <p class="text-gray-500">No public repositories found.</p>
+    {% endfor %}
+  </div>
+</div>
