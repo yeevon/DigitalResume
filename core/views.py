@@ -97,7 +97,7 @@ def home(request):
             "icon": "github",  # special rendering case
         },
         {
-            "icon": "📚",
+            "icon": '<i class="fa-solid fa-book"></i>',
             "title": "Organized Book Club",
             "description": "Led initiative to launch a developer book club",
             "items": [
@@ -108,7 +108,7 @@ def home(request):
             "skills": "Community engagement, initiative ownership, team facilitation",
         },
         {
-            "icon": "🐍",
+            "icon": '<i class="fa-brands fa-python"></i>',
             "title": "Python Learning Cohort",
             "description": "Created and manage an async Python study group",
             "items": [
@@ -119,7 +119,7 @@ def home(request):
             "skills": "Curriculum planning, peer mentorship, async collaboration",
         },
         {
-            "icon": "🌐",
+            "icon": '<i class="fa-solid fa-globe"></i>',
             "title": "Club Website Project",
             "description": "Architected and deployed full-stack club site",
             "items": [
@@ -131,7 +131,7 @@ def home(request):
             "link": "https://github.com/codingUnited/clubwebsite",
         },
         {
-            "icon": "⚙️",
+            "icon": '<i class="fa-solid fa-flag"></i>',
             "title": "Coding Challenge Platform",
             "description": "Launched challenge system to build hands-on Git skills",
             "items": [
@@ -142,7 +142,7 @@ def home(request):
             "link": "https://github.com/codingUnited/ClubCodeChallenges",
         },
         {
-            "icon": "🎮",
+            "icon": '<i class="fa-solid fa-gamepad"></i>',
             "title": "Game Server Project",
             "description": "Prototyped containerized game server for community play",
             "items": [
@@ -152,7 +152,7 @@ def home(request):
             ],
         },
         {   
-            "icon": "🧭",
+            "icon": '<i class="fa-solid fa-people-group"></i>',
             "title": "Subcommittee Leadership",
             "description": "Created a leadership system with subcommittees for club roles",
             "items": [

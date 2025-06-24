@@ -18,7 +18,7 @@
       </a>
     {% else %}
       <span class="flex items-center gap-2 mb-2">
-        <span class="text-xl leading-none">{{ tile.icon }}</span>
+        <span class="text-xl leading-none">{{ tile.icon|safe }}</span>
         <a 
           href="{{ tile.link }}" 
           target="_blank" 
@@ -30,7 +30,7 @@
     {% endif %}
   {% else %}
     <span class="flex items-center gap-2 mb-2">
-      <span class="text-xl leading-none">{{ tile.icon }}</span>
+      <span class="text-xl leading-none">{{ tile.icon|safe }}</span>
       <h3 class="text-lg font-semibold">{{ tile.title }}</h3>
     </span>
   {% endif %}

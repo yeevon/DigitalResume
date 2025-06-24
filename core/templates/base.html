@@ -1,44 +1,43 @@
 <!DOCTYPE html>
-<html  class="h-full" lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  {% load static %}
-  {% block title %}{% endblock %}
+<html class="h-full" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %} {% block title %}{% endblock %}
 
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <script src="https://unpkg.com/htmx.org@1.9.2"></script>
-</head>
-<body class= "bg-[url('/static/images/Hulk_large.jpg')] bg-cover bg-center text-gray-800 font-sans min-h-screen">
-  <div class="max-w-screen-2xl mx-auto">
-    <header class="sticky top-0 z-50 bg-teal-200 border-b text-center">
-      <nav class="flex flex-col sm:flex-row items-center justify-between gap-2 px-4">
-        <!-- Name block -->
-        <div>
-          <h1 class="text-2xl sm:text-4xl font-bold">Jose Miguel de Lima</h1>
-          <p class="text-base sm:text-lg font-black">QA Lead & Full Stack Developer</p>
-        </div>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://unpkg.com/htmx.org@1.9.2"></script>
+    <script src="https://kit.fontawesome.com/b0e0f8ab30.js" crossorigin="anonymous"></script>
+  </head>
+  <body class="bg-[url('/static/images/Hulk_large.jpg')] bg-cover bg-center text-gray-800 font-sans min-h-screen">
+    <div class="max-w-screen-2xl mx-auto">
+      <header class="sticky top-0 z-50 bg-teal-200 border-b text-center">
+        <nav class="flex flex-col sm:flex-row items-center justify-between gap-2 px-4">
+          <!-- Name block -->
+          <div>
+            <h1 class="text-2xl sm:text-4xl font-bold">Jose Miguel de Lima</h1>
+            <p class="text-base sm:text-lg font-black">QA Lead & Full Stack Developer</p>
+          </div>
           <!-- Icon links -->
-        <div class="flex justify-center items-center gap-4 text-2xl">
-          <a href="mailto:delimajm@gmail.com" aria-label="Email">📧</a>
-          <a href="https://www.linkedin.com/in/jose-de-lima-aa8a5a23/" target="_blank" aria-label="LinkedIn">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" width="20" />
-          </a>
-          <a href="https://github.com/yeevon" target="_blank" aria-label="GitHub">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" width="20" />
-          </a>
-        </div>
-      </nav>
-    </header>
-    
-    {% block content %}{% endblock %}
+          <div class="flex justify-center items-center gap-4 text-2xl">
+            <a href="mailto:delimajm@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/jose-de-lima-aa8a5a23/" target="_blank" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/yeevon" target="_blank" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </nav>
+      </header>
 
-    <footer class="text-center text-sm bg-teal-200 font-semibold">
-      <p>&copy; 2025 Jose Miguel de Lima. All rights reserved.</p>
-    </footer>
-  </div>
-</body>
+      {% block content %}{% endblock %}
 
+      <footer class="text-center text-sm bg-teal-200 font-semibold">
+        <p>&copy; 2025 Jose Miguel de Lima. All rights reserved.</p>
+      </footer>
+    </div>
+  </body>
 </html>
