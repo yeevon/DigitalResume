@@ -1,4 +1,4 @@
-# 🧠 Digital Resume – Jose Miguel de Lima
+# Digital Resume – Jose Miguel de Lima
 
 A dynamic, responsive digital resume built with Django, Tailwind CSS, HTMX, and Docker. This project showcases QA leadership and full-stack skills, with a clean interface and progressive enhancement.
 
