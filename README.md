@@ -1,17 +1,29 @@
 # Digital Resume – Jose Miguel de Lima
 
-A dynamic, responsive digital resume built with Django, Tailwind CSS, HTMX, and Docker. This project showcases QA leadership and full-stack skills, with a clean interface and progressive enhancement.
+A dynamic, responsive digital resume built with Django, Tailwind CSS, HTMX, and Docker. This project showcases QA leadership and full-stack skills, featuring interactive UI, API integration, and modern design principles.
 
-### https://www.jmdelima.cv
+**🌐 Live Site:** https://www.jmdelima.cv
+---
+
+## ✨ Recent Enhancements
+- GitHub API Integration – Public repos are fetched dynamically and sorted by last updated date.
+
+- Dark Mode Toggle – Accessible via a UI button with responsive positioning.
+
+- Tailored CSS Adjustments – Improved mobile handling, fixed layout shifting, better spacing, and consistent component alignment.
+
+- Mobile UI Fixes – Resolved scroll bleed, adjusted icon layout, and enhanced modal readability.
+
+- Manual AWS Deployment – Project hosted via EC2, styled assets served statically, deployed without automated CI/CD for full control.
 ---
 
 ## 🚀 Tech Stack
 
 - **Backend**: Python 3, Django
-- **Frontend**: HTMX, Tailwind CSS, Alpine.js
+- **Frontend**: HTMX, Tailwind CSS (via CDN), Alpine.js
 - **Containerization**: Docker & Docker Compose
 - **Package Management**: npm
-- **CSS Build**: Tailwind CLI with DaisyUI
+- **CSS Build**: Tailwind CLI with DaisyUI (with fallback to CDN for simplicity)
 - **Database**: SQLite (for development)
 
 ---
@@ -74,42 +86,46 @@ This will:
  ## 💡 Skills Demonstrated
 
  #### 📦 Backend & DevOps
- - Python & Django project setup
+ - Django architecture, views, routing
 
- - ORM usage with SQLite
+ - GitHub API integration via requests
 
  - Dockerfile and Docker Compose configuration
 
  - Environment isolation
 
 #### 🎨 Frontend
- - Tailwind CSS (v4 with @source)
+ - Tailwind CSS v4 + DaisyUI
 
- - DaisyUI components
+ - Dark mode via Tailwind’s dark class strategy
 
  - Responsive, mobile-first design
 
- - Conditional rendering with Tailwind classes
+ - Font Awesome icons
 
 #### ⚙️ Interactivity & UX
- - HTMX for dynamic page updates without full reloads
+ - HTMX for component-level updates
 
  - Alpine.js for lightweight reactivity
 
- - Accessible layout and icon design
+ - Custom modal behavior, dynamic sorting, accessibility improvements
 
  -----------------------------
 
-## 📂 Project Structure Highlights
-- manage.py: Django entry point
+## 📂 Key Structure
+- manage.py – Django entry point
 
-- package.json: Tailwind & npm setup
+- requirements.txt – Python dependencies
 
-- Dockerfile*: Container configurations
+- Dockerfile / docker-compose.yml – Container setup
 
-- src/: Tailwind input CSS with directives and @source
+- src/ – Tailwind custom input (if used)
 
-- templates/: Django templates (includes and base layout)
+- templates/ – Base layout, reusable components
+
+- static/ – Custom images and styling
+
+- core/views.py – API logic and dynamic content handling
 
 --------------------------
 ## 📬 Contact: Jose Miguel de Lima
