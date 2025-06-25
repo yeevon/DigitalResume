@@ -11,8 +11,10 @@ def home(request):
             "dates": "10/24 – Present",
             "url": "https://snimbus.ai/",
             "summary": "I lead a team in building automation test suites for over 30 applications, focusing on API and " +
-                    "UI testing using Selenium with Java. Developed flexible templates to create custom frameworks " +
-                    "tailored to individual application requirements. Coordinated with developers and business " +
+                    "UI testing using Selenium with Java. <br>"
+                    "Developed flexible templates to create custom frameworks " +
+                    "tailored to individual application requirements. <br>"
+                    "Coordinated with developers and business " +
                     "stakeholders to ensure testing solutions align with project needs.",
             "bullets": [
                 "Contributed to CI/CD pipeline integration, ensuring automated test suites were seamlessly executed in dev workflows.",
@@ -30,7 +32,8 @@ def home(request):
             "dates": "01/23 – 10/24",
             "url": "https://www.sidonline.com/",
             "summary": "I led QA efforts for a government contract for the DMDC, focusing on automation (C# with Selenium), " +
-                        "API testing, and database validation. Created and executed test cases to validate user stories, built " +
+                        "API testing, and database validation. <br>"
+                        "Created and executed test cases to validate user stories, built " +
                         "unit test standards, and provided regular reporting through Jira.",
             "bullets": [
                 "Designed and maintained a custom regression suite in C# with Selenium, integrated into CI workflows for faster release cycles.",
@@ -52,11 +55,12 @@ def home(request):
             "role": "QA Engineer",
             "dates": "2017 - 2023",
             "url": "https://www.usaa.com/?akredirect=true",
-            "summary": "Managed a team of on/off-site resources in QA effort. I trained 12 teams in testing " +
-                        "methodology, automation, documentation, and IT compliance. Supervised the introduction " + 
-                        "of new tools to the organization. Collaborated with the team on accessibility, security, " + 
-                        "and performance testing. Built a website to report regression testing status across all " + 
-                        "test environments. Developed UI to trigger a limited number of regression tests for business.",
+            "summary": "Managed a team of on/off-site resources in QA effort. <br>"
+                "I trained 12 teams in testing methodology, automation, documentation, and IT compliance. <br>"
+                "Supervised the introduction of new tools to the organization. <br>"
+                "Collaborated with the team on accessibility, security, and performance testing. <br>"
+                "Built a website to report regression testing status across all test environments. <br>"
+                "Developed UI to trigger a limited number of regression tests for business.",
             "bullets": [
                 "Prioritized production bugs with the program team. I documented test cases and bugs.",
                 "Launched functional automated test to the CI/CD Pipeline, increasing speed to market.",
@@ -73,12 +77,11 @@ def home(request):
             "role": "QA Engineer",
             "dates": "2014 - 2016",
             "url": "https://www.campsystems.com/",
-            "summary": "Generated test case execution and defect reports. I took care of updating, creating, " +
-                        "and pruning manual test cases for the system on both mobile and web platforms. Streamlined " +
-                        "the process to facilitate testing of new user stories and improved regression testing. " +
-                        "Leveraged Agile and Scrum project management practices, transitioning existing project " +
-                        "requirements to user stories. Collaborated with the development team to complete user " +
-                        "stories.",
+            "summary": "Generated test case execution and defect reports. <br>"
+                "I took care of updating, creating, and pruning manual test cases for the system on both mobile and web platforms. <br>"
+                "Streamlined the process to facilitate testing of new user stories and improved regression testing. <br>" +
+                "Leveraged Agile and Scrum project management practices, transitioning existing project requirements to user stories. <br>"
+                "Collaborated with the development team to complete user stories.",
             "bullets": [
                 "I endorsed improving the documentation process and user guides.",
                 "Built custom Automation Test framework in C# with Selenium WebDriver.",
