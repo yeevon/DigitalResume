@@ -1,11 +1,10 @@
+{% load static tailwind_tags %}
 <!DOCTYPE html>
 <html class="h-full" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {% load static %} {% block title %}{% endblock %}
-
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    {% tailwind_css %} {% block title %}{% endblock %}
 
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Inline config -->
@@ -40,9 +39,9 @@
           </div>
 
           <!-- Icon + Dark Mode block -->
-          <div class="relative w-full sm:w-auto">
+          <div class="flex justify-between items-center w-full sm:w-auto">
             <!-- Social icons (centered on mobile, left-aligned on desktop) -->
-            <div class="flex justify-center sm:justify-start sm:mr-8 gap-4 text-2xl">
+            <div class="flex flex-1 justify-center sm:justify-start gap-4 text-2xl">
               <a href="mailto:delimajm@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
               <a href="https://www.linkedin.com/in/jose-de-lima-aa8a5a23/" target="_blank" aria-label="LinkedIn">
                 <i class="fa-brands fa-linkedin-in"></i>
@@ -50,16 +49,15 @@
               <a href="https://github.com/yeevon" target="_blank" aria-label="GitHub">
                 <i class="fa-brands fa-github"></i>
               </a>
+              <!-- Dark mode toggle (absolutely positioned) -->
+              <button
+                class="sm:right-[-0.5rem] text-2xl"
+                aria-label="Toggle Dark Mode"
+                onclick="document.documentElement.classList.toggle('dark')"
+              >
+                <i class="fa-solid fa-circle-half-stroke"></i>
+              </button>
             </div>
-
-            <!-- Dark mode toggle (absolutely positioned) -->
-            <button
-              class="absolute right-2 top-1/2 -translate-y-1/2 sm:right-[-0.5rem] text-2xl"
-              aria-label="Toggle Dark Mode"
-              onclick="document.documentElement.classList.toggle('dark')"
-            >
-              <i class="fa-solid fa-circle-half-stroke"></i>
-            </button>
           </div>
         </nav>
       </header>
