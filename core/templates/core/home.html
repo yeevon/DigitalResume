@@ -40,53 +40,53 @@
           <p class="block lg:hidden">Degree: B.S. in Comp Sci.</p>
           <p>Minor: Mathematics</p>
           <p>Coding United Club: President</p>
-          <p>Expected Graduation: Jan 2028</p>
+          <p>Expected Graduation: July 2027</p>
         </div>
       </div>
 
       <!--Club Projects Carousel -->
-      <div class="lg:w-2/3 w-full">
-        <div class="relative">
-          <!-- Scrollable tile row -->
-          <div class="relative">
-            <!-- 🔽 Scrollable container -->
-            <div id="club-scroll" class="overflow-x-auto flex gap-4 pr-6 snap-x scroll-smooth relative z-10">
-              {% for tile in club_tiles %} {% include "partials/club_tiles.html" %} {% endfor %}
-            </div>
+      <div class="lg:w-2/3 w-full relative">
+        <!--Scrollable container -->
+        <div id="club-scroll" class="overflow-x-auto flex gap-4 pr-6 snap-x scroll-smooth relative z-10">
+          {% for tile in club_tiles %} {% include "partials/club_tiles.html" %} {% endfor %}
+        </div>
 
-            <!-- 🔽 left arrow hint -->
-            <div 
-              class="absolute top-1/2 -translate-y-1/2 -left-7 z-10 
-                    bg-white/800 text-gray-400 dark:text-white text-base rounded-full 
-                    p-3 cursor-pointer hover:text-black dark:hover:text-gray-300
-                    transition duration-200 shadow-md sm:hidden"
-            >
-              <i class="fa-solid fa-arrow-left"></i>
-            </div>
-            <!-- 🔽 right arrow hint -->
-            <div 
-              class="absolute top-1/2 -translate-y-1/2 -right-6 z-10 
-                    bg-white/800 text-gray-400  dark:text-white text-sm rounded-full 
-                    p-3 cursor-pointer hover:text-black dark:hover:text-gray-300
-                    transition duration-200 shadow-md sm:hidden"
-            >
-              <i class="fa-solid fa-arrow-right"></i>
-          </div>
+        <!-- left arrow hint -->
+        <div
+          class="absolute top-1/2 -translate-y-1/2 -left-7 z-10 
+                  bg-white/800 text-gray-400 dark:text-white text-base rounded-full 
+                  p-3 cursor-pointer hover:text-black dark:hover:text-gray-300
+                  transition duration-200 shadow-md sm:hidden"
+        >
+          <i class="fa-solid fa-arrow-left"></i>
+        </div>
+        <!-- right arrow hint -->
+        <div
+          class="absolute top-1/2 -translate-y-1/2 -right-6 z-10 
+                  bg-white/800 text-gray-400  dark:text-white text-sm rounded-full 
+                  p-3 cursor-pointer hover:text-black dark:hover:text-gray-300
+                  transition duration-200 shadow-md sm:hidden"
+        >
+          <i class="fa-solid fa-arrow-right"></i>
         </div>
       </div>
     </div>
   </section>
+
   <!-- Skills -->
   <section class="mb-6">
     <h2 class="text-2xl font-semibold border-b pb-2 mb-4">Skills</h2>
     <div class="flex flex-wrap gap-2">
       {% for skill in skills %}
-      <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-300 px-2 py-1 rounded-full text-sm">{{ skill }}</span>
+      <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-300 px-2 py-1 rounded-full text-sm">
+        {{ skill }}
+      </span>
       {% endfor %}
     </div>
   </section>
   {% include "partials/repo_widget.html" %}
 </div>
+
 <script>
   function scrollClub(direction) {
     const container = document.getElementById("club-scroll");

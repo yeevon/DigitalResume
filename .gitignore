@@ -35,7 +35,6 @@ local_settings.py
 # === Docker ===
 *.pid
 *.tgz
-.dockerignore
 docker-compose.override.yml
 .env
 .env.*
