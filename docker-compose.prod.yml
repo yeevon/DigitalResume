@@ -1,5 +1,6 @@
 services:
   resume:
+    container_name: resume
     build: .
     command: >
       sh -c "python manage.py collectstatic --noinput &&
