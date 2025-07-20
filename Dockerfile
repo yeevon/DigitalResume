@@ -17,7 +17,10 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 COPY . .
 
 # Install Tailwind deps (theme/ must exist)
-WORKDIR /app/theme
-RUN npm install
+RUN python manage.py tailwind install
+RUN python manage.py tailwind build  # This builds the CSS once
 
-WORKDIR /app
+# Collect static files
+RUN python manage.py collectstatic --noinput
+
+RUN apt-get clean && rm -rf /var/lib/apt/lists/*
