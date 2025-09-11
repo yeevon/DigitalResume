@@ -6,22 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% tailwind_css %} {% block title %}{% endblock %}
 
-    <script src="https://cdn.tailwindcss.com"></script>
+
     <!-- Inline config -->
-    <script>
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            colors: {
-              teal: {
-                900: '#134e4a'
-              }
-            }
-          }
-        }
-      }
-    </script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://unpkg.com/htmx.org@1.9.2"></script>
     <script src="https://kit.fontawesome.com/b0e0f8ab30.js" crossorigin="anonymous"></script>
@@ -38,7 +24,7 @@
             <p class="text-base sm:text-lg font-black">QA Lead & Full Stack Developer</p>
           </div>
 
-          <!-- Icon + Dark Mode block -->
+          <!-- Icon -->
           <div class="flex justify-between items-center w-full sm:w-auto">
             <!-- Social icons (centered on mobile, left-aligned on desktop) -->
             <div class="flex flex-1 justify-center sm:justify-start gap-4 text-2xl">
@@ -49,14 +35,6 @@
               <a href="https://github.com/yeevon" target="_blank" aria-label="GitHub">
                 <i class="fa-brands fa-github"></i>
               </a>
-              <!-- Dark mode toggle (absolutely positioned) -->
-              <button
-                class="sm:right-[-0.5rem] text-2xl"
-                aria-label="Toggle Dark Mode"
-                onclick="document.documentElement.classList.toggle('dark')"
-              >
-                <i class="fa-solid fa-circle-half-stroke"></i>
-              </button>
             </div>
           </div>
         </nav>

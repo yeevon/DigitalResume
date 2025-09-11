@@ -1,5 +1,5 @@
 import requests
-from django.shortcuts import render
+from django.shortcuts import render # type: ignore
 from dateutil import parser
 
 # Create your views here.
@@ -102,21 +102,20 @@ def home(request):
         {
             "icon": '<i class="fa-solid fa-book"></i>',
             "title": "Organized Book Club",
-            "description": "Led initiative to launch a developer book club",
+            "description": "Led initiative to launch a developer book club\nBooks Read:",
             "items": [
-                "Selected first title: Object-Oriented Thought Process (5th Ed)",
-                "Organized reading schedule and peer discussions",
-                "Promoted O’Reilly access via SNHU portal",
+                "Object-Oriented Thought Process (5th Ed)",
+                "Head First Design Patterns",
             ],
             "skills": "Community engagement, initiative ownership, team facilitation",
         },
         {
             "icon": '<i class="fa-brands fa-python"></i>',
-            "title": "Python Learning Cohort",
-            "description": "Created and manage an async Python study group",
+            "title": "AI Python for Beginners",
+            "description": "Created and manage a sync Python study group",
             "items": [
-                "Set up structure for biweekly check-ins",
-                "Curated beginner curriculum via O’Reilly",
+                "Set up weekly study sessions",
+                "Worked on AI Chatbot to reinforce learing",
                 "Encouraged code sharing and project collaboration",
             ],
             "skills": "Curriculum planning, peer mentorship, async collaboration",
@@ -126,7 +125,7 @@ def home(request):
             "title": "Club Website Project",
             "description": "Architected and deployed full-stack club site",
             "items": [
-                "Tech stack: Django • HTMX • Alpine.js • SQLite • Docker",
+                "Tech stack: Django • HTMX • Alpine.js • PostgreSQL • Docker",
                 "Wrote tech stack onboarding docs for contributors",
                 "Created GitHub Projects board for task tracking",
             ],
@@ -146,12 +145,12 @@ def home(request):
         },
         {
             "icon": '<i class="fa-solid fa-gamepad"></i>',
-            "title": "Game Server Project",
-            "description": "Prototyped containerized game server for community play",
+            "title": "Roku Remote Project",
+            "description": "Wroked as a group to create Roku Remote app and Physical remotes",
             "items": [
-                "Focus on CI/CD, Docker, and remote deployment",
-                "Peer-led planning and monitoring of infrastructure",
-                "DevOps, networking basics, container orchestration",
+                "React-navtive and IOT development",
+                "Peer-led planning and colloboration",
+                "Mobile development and basic IoT electronics",
             ],
         },
         {   
@@ -190,7 +189,7 @@ def home(request):
 
     skills = ['JavaScript', 'Python', 'Django', 'Docker', 'Java', 'C#', 'Selenium', 
     'WDIO', 'HTML', 'Tailwindcss', 'Pandas', 'LaTeX', 'MATLAB', 'WDIO', 'Jest', 'JUnit', 
-    'Postman', 'Testim', 'FitNesse',]
+    'Postman', 'ROS2', 'PostgreSQL', 'Reactjs', 'Gazebo', 'Unity', 'IOT']
     
     return render(request, "core/home.html", {
         "jobs": jobs, 
