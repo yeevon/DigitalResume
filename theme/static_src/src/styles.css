@@ -36,11 +36,17 @@ h2 {
   @apply flex flex-1 justify-center gap-6 text-2xl
 }
 footer {
-  @apply text-center text-xl bg-teal-950 font-semibold
+  @apply text-center text-base sm:text-xl bg-teal-950 font-semibold
 }
 body h2:not(header h2) {
   @apply mb-4 border-b
 }
 #git-tiles {
   @apply grid sm:grid-cols-2 lg:grid-cols-3 gap-6
+}
+#git-tiles > div {
+  @apply border-2 border-indigo-600 rounded-lg p-4 shadow-lg bg-white
+}
+h3 {
+  @apply text-lg md:text-xl font-bold mb-1
 }
