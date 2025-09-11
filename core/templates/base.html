@@ -1,6 +1,6 @@
 {% load static tailwind_tags %}
 <!DOCTYPE html>
-<html class="h-full" lang="en">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,23 +12,22 @@
     <script src="https://unpkg.com/htmx.org@1.9.2"></script>
     <script src="https://kit.fontawesome.com/b0e0f8ab30.js" crossorigin="anonymous"></script>
   </head>
-  <body
-    class="bg-[url('/static/images/Hulk_large.jpg')] dark:bg-[url('')] dark:bg-black bg-cover bg-center dark:text-white font-sans min-h-screen"
-  >
-    <div class="max-w-screen-2xl mx-auto">
-      <header class="sticky top-0 z-50 bg-teal-200 dark:bg-teal-950 border-b">
-        <nav class="flex flex-col sm:flex-row items-center justify-between gap-2 px-4 py-2">
+  <body>
+    <div>
+      <header>
+        <nav>
           <!-- Name block -->
-          <div class="text-center sm:text-left">
-            <h1 class="text-2xl sm:text-4xl font-bold">Jose Miguel de Lima</h1>
-            <p class="text-base sm:text-lg font-black">QA Lead & Full Stack Developer</p>
+          <div>
+            <h1>Jose Miguel de Lima</h1>
+            <h2>QA Lead & Full Stack Developer</h2>
           </div>
 
           <!-- Icon -->
-          <div class="flex justify-between items-center w-full sm:w-auto">
+          <div id="icons">
             <!-- Social icons (centered on mobile, left-aligned on desktop) -->
-            <div class="flex flex-1 justify-center sm:justify-start gap-4 text-2xl">
-              <a href="mailto:delimajm@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            <div class="">
+              <a href="mailto:delimajm@gmail.com" aria-label="Email">
+                <i class="fa-solid fa-envelope"></i></a>
               <a href="https://www.linkedin.com/in/jose-de-lima-aa8a5a23/" target="_blank" aria-label="LinkedIn">
                 <i class="fa-brands fa-linkedin-in"></i>
               </a>
@@ -42,7 +41,7 @@
 
       {% block content %}{% endblock %}
 
-      <footer class="text-center text-base bg-teal-200 dark:bg-teal-950 font-semibold">
+      <footer>
         <p>&copy; 2025 Jose Miguel de Lima. All rights reserved.</p>
       </footer>
     </div>

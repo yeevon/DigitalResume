@@ -9,3 +9,38 @@
   * the scope of this path.
   */
 @source "../../../**/*.{html,py,js}";
+
+html {
+  @apply bg-gray-700
+}
+body {
+  @apply  font-sans max-w-screen-2xl mx-auto text-gray-100
+}
+header {
+  @apply sticky top-0 z-50 bg-teal-950 border-b 
+}
+nav {
+  @apply flex flex-col sm:flex-row justify-between px-4 py-2 text-center
+}
+h1 {
+  @apply text-2xl sm:text-4xl font-bold
+}
+h2 {
+  @apply text-base sm:text-xl font-black
+}
+#icons {
+
+  @apply flex items-center
+}
+#icons > div {
+  @apply flex flex-1 justify-center gap-6 text-2xl
+}
+footer {
+  @apply text-center text-xl bg-teal-950 font-semibold
+}
+body h2:not(header h2) {
+  @apply mb-4 border-b
+}
+#git-tiles {
+  @apply grid sm:grid-cols-2 lg:grid-cols-3 gap-6
+}
