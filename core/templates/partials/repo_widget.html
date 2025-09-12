@@ -6,11 +6,11 @@
       <h3>
         <a href="{{ repo.html_url }}" target="_blank" class="text-blue-700 hover:underline">{{ repo.name }}</a>
       </h3>
-      <p class="text-base text-gray-600 mb-2">{{ repo.description|default:"No description provided." }}</p>
-      <p class="text-sm text-gray-500">★ {{ repo.stargazers_count }} | Updated: {{ repo.updated_dt|date:"Y-m-d" }}</p>
+      <p class="text-base text-black mb-2">{{ repo.description|default:"No description provided." }}</p>
+      <p class="text-sm text-gray-700">★ {{ repo.stargazers_count }} | Updated: {{ repo.updated_dt|date:"Y-m-d" }}</p>
     </div>
     {% empty %}
-    <p class="text-gray-500">No public repositories found.</p>
+    <p class="text-gray-700">No public repositories found.</p>
     {% endfor %}
   </div>
 </div>

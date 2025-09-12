@@ -165,26 +165,37 @@ def home(request):
         },
     ]
 
+    repos = []
+
     url = 'https://api.github.com/users/yeevon/repos'
     headers = {'Accept': 'application/vnd.github.v3+json'}
-    response = requests.get(url, headers=headers)
+    
+    try:
+        response = requests.get(url, headers=headers)
 
-    if response.status_code == 200:
-        data = response.json()
+        if response.status_code == 200:
+            data = response.json() or []
+            cleaned = []
+            
+            for r in data:
+                if r['fork'] or r['archived']:
+                    continue
         
-        for r in data:
-            if not r['fork'] and not r['archived']:
-                r['updated_dt'] = parser.parse(r['updated_at'])
-    
-    
-        repos = sorted(
-            [r for r in data if 'updated_dt' in r],
-            key=lambda x: x['updated_dt'],
-            reverse=True
-        )[:]
+                try:
+                    r['updated_dt'] = parser.parse(r.get('updated_at', ""))
+                    cleaned.append(r)
+                except:
+                    continue
 
-   
-
+            repos = sorted(
+                [r for r in data if 'updated_dt' in r],
+                key=lambda x: x['updated_dt'],
+                reverse=True
+            )[:]
+        else:
+            pass
+    except requests.RequestException:
+        pass
 
 
     skills = ['JavaScript', 'Python', 'Django', 'Docker', 'Java', 'C#', 'Selenium', 
